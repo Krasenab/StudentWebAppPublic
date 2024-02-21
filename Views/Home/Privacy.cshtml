@@ -1,0 +1,250 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@*<h1 >@ViewData["Title"]</h1>*@
+
+<head>
+    <style>
+
+
+        .section-containers {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70%;
+            /*margin: auto;*/
+            margin-left: 3em;
+            margin-right: 3em;*/
+             width: calc(100% - 6em); 
+            margin: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 8px;
+            animation: fadeInUp 1s ease-out;
+            position: relative;
+        }
+       
+    
+        
+
+        .tab-content {
+            padding-top: 60px;
+        }
+
+
+
+        .tabs-custom .nav-tabs .nav-link {
+            background: white; /* Светъл фон за неактивни табове */
+            color: black;
+            margin-left: 5em;
+            border: none; /* Премахва рамката */
+            transition: all 0.3s ease-in-out; /* Плавна анимация */
+        }
+
+            .tabs-custom .nav-tabs .nav-link.active,
+            .tabs-custom .nav-tabs .nav-link:hover {
+                background-color: white; /*  background-color: #01b3a7;  Цвят на активния таб */
+                color: black;
+                border-bottom: 1px solid #495055;
+            }
+
+
+
+
+
+        .group-md {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font: 35px "Montserrat", sans-serif, Arial, sans-serif;
+        }
+
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+
+        .bcontent {
+            background: #01b3a7;
+            text-decoration: none;
+            font: "Montserrat", sans-serif, Arial, sans-serif;
+            color: #fff;
+            border: solid 1px white;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавен преход за цвета и сянката */
+        }
+
+            .bcontent:hover, .bcontent:focus {
+                background: white;
+                border: solid 1.5px black;
+                color: black;
+                padding: 10px 20px;
+                margin-right: 10px;
+            }
+
+        .bcontentR {
+            background: white;
+            border: solid 1.5px black;
+            color: black;
+            text-decoration: none;
+            font: 16px "Montserrat", sans-serif, Arial, sans-serif;
+            padding: 10px 20px;
+            margin-right: 10px;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out; /* Плавен преход за цвета и сянката */
+        }
+
+
+            .bcontentR:hover, .bcontentR:focus {
+                background: #01b3a7;
+                text-decoration: none;
+                font: 16px "Montserrat", sans-serif, Arial, sans-serif;
+                color: #fff;
+                border: solid 1px white;
+                padding: 10px 20px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+        /* Нова анимация за изкачане */
+        @@keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale(1.01);
+                overflow: hidden;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .section-containers {
+            animation: popIn 1.5s ease-out; /* Променете анимацията на контейнера */
+        }
+
+        .wow {
+            visibility: hidden; /* Елементите са скрити до активиране на анимацията */
+        }
+
+            .wow.fadeInUp {
+                animation-name: fadeInUp; /* Използвайте fadeInUp за елементи с клас fadeInUp */
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            .wow.popIn {
+                animation-name: popIn; /* Използвайте popIn за елементи с клас popIn */
+                animation-duration: 1.5s;
+                animation-fill-mode: both; /* Запазва крайните стилове на анимацията */
+            }
+
+    </style>
+</head>
+
+
+
+
+
+<section class="section-containers">
+
+    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+        <div class="col-lg-6 text-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="~/Image/forest-1024x679.jpg" alt="" width="853" height="800">
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
+            <h3>Discover New Horizons</h3>
+            <div class="box-width-lg-470">
+                <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-1 text-center text-md-left" id="tabs-7">
+                    <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><p>My first logic use bootstrap</p></div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><p>Some content</p> </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><p>Must stop use drugs and joints</p></div>
+                    </div>
+                    <div class="group-md group-middle">
+                        <a href="#" class="bcontent">Get In Touch</a>
+                        <a href="#" class="bcontentR">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener('scroll', function () {
+            // Намиране на всички елементи с клас 'wow'
+            var elements = document.querySelectorAll('.wow');
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                // Проверка дали елементът е във видимата част на екрана
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.style.visibility = 'visible'; // Правене на елемента видим
+                    if (!element.classList.contains('fadeInRight')) {
+                        element.classList.add('popIn'); // Добавяне на класа 'popIn' за анимация
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+@*<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null, // наблюдава относително към viewport
+            rootMargin: '0px',
+            threshold: 0.5 //0,1 тригърва се когато 10% от елемента е видим
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Ако елементът влезе във видимата област
+                    entry.target.classList.add('animate__animated', 'animate__backInLeft'); // Добавя анимацията
+                    // Ако искаш да рестартираш анимацията всеки път, когато елементът влезе във видимата област,
+                    // можеш да премахнеш и добавиш класовете отново, за да "рестартираш" анимацията
+                    setTimeout(() => {
+                        entry.target.classList.remove('animate__animated', 'animate__backInLeft');
+                        void entry.target.offsetWidth; // трик за рестартиране на CSS анимация
+                        entry.target.classList.add('animate__animated', 'animate__backInLeft');
+                    }, 20000); // example: 1000 задади подходящо време за забавяне според нуждите
+                }
+            });
+        }, observerOptions);
+
+        // Добавя всички елементи, които искаш да наблюдаваш
+        document.querySelectorAll('.animate__animated').forEach((element) => {
+            observer.observe(element);
+        });
+    });
+</script>*@

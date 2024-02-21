@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Tours</title>
+    <style>
+
+          /*I remove  boddy style cuz i use global bodystyle but not work. Default element:font-family: 'Arial', sans-serif;*/
+
+        /*  body {
+
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+
+          }*/
+
+          .hot-tours-container {
+
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 20px;
+              padding: 20px;
+              padding-top:2em;
+              background: #f5f5f5;
+              border:4px solid yellow;
+              max-height:100%;                        
+ 
+
+          }
+
+          body{
+          
+
+          }
+
+
+          /*tour-guide-card-style-strart here*/
+
+          .tour-card {
+
+              background: #ffffff;
+              width: 300px;
+              border: 1px solid #dddddd;
+              border-radius: 8px;
+              overflow: hidden;
+              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+          }
+
+          .tour-image img {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+          }
+
+          .tour-info {
+              padding: 15px;
+              text-align: left;
+          }
+
+          .tour-title {
+              font-size: 1.2em;
+              color: #333;
+              margin: 0;
+          }
+
+          .tour-price {
+              background: #17a2b8;
+              color: #ffffff;
+              padding: 5px 10px;
+              float: right;
+              font-weight: bold;
+              border-radius: 8px;
+          }
+
+          .tour-description {
+              font-size: 0.9em;
+              color: #666;
+              line-height: 1.6;
+              margin: 10px 0;
+          }
+
+          .tour-rating {
+              color: #f5c518;
+          }
+
+          .clearfix::after {
+              content: "";
+              clear: both;
+              display: table;
+          }
+
+          .button-ujarak {
+              background: #01b3a7;
+              color: #ffffff;
+              text-align: center;
+              padding: 10px;
+              text-decoration: none;
+              display: block;
+              border-radius: 8px;
+              margin: 10px 0;
+              position: relative;
+              overflow: hidden;
+              transition: color 0.3s ease, background-color 0.3s ease;
+              z-index: 1;
+          }
+
+              .button-ujarak::before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: #ffffff;
+                  z-index: -1;
+                  transform: scale3d(0.7, 1, 1);
+                  transition: transform 0.3s ease, opacity 0.3s ease;
+                  opacity: 0;
+                  border-radius: 8px;
+              }
+
+              .button-ujarak:hover, .button-ujarak:focus {
+                  color: black;
+                  background: transparent;
+                  border: 1px solid black;
+              }
+
+                  .button-ujarak:hover::before, .button-ujarak:focus::before {
+                      opacity: 1;
+                      transform: scale3d(1, 1, 1);
+                  }
+
+
+
+
+          .button-black-outlines {
+              position:relative;
+              margin: 10px 0;
+              border-radius: 8px;
+              padding: 10px;
+              text-align: center;
+              text-decoration: none;
+              background: white;
+              color: black;
+              overflow: hidden;
+              display: block;
+              border: 1px solid black;
+              z-index:1;
+          }
+
+              .button-black-outlines::before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: -1;
+                  transform: scale3d(0.7,1 , 1);
+                  transition: transform 0.3s ease, opacity 0.3s ease;
+                  opacity: 0;
+                  background: #01b3a7;
+              }
+
+              .button-black-outlines:hover{
+                  background: transparent;
+                  border:none;
+                  color:white;
+
+              }
+
+              .button-black-outlines:hover::before, .button-black-outlines:focus::before {
+                  opacity:1;
+                  transform:scale3d(1,1,1);
+              }
+
+          /*tour-guide-card-style-end here*/
+
+
+
+    </style>
+</head>
+
+<!--I remove boddy element to use a globe boddy from _Layout.cshtml.css.But not work -->
+
+<body>
+    <section class="hot-tours-container">
+        <!-- Tour Card 1 -->
+        <div class="tour-card">
+
+            <div class="tour-image">
+                <img src="benidorm.jpg" alt="Benidorm, Spain">
+            </div>
+            <div class="tour-info">
+                <h3 class="tour-title">Benidorm, Spain</h3>
+                <div class="tour-rating">
+                    ★★★★☆ 4 customer reviews
+                </div>
+                <div class="clearfix">
+                    <div class="tour-price">$790</div>
+                </div>
+                <p class="tour-description">
+                    Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...
+                </p>
+                <a href="#" class="button-ujarak">Buy This Tour</a>
+            </div>
+        </div>
+
+        <!-- Tour Card 2 -->
+        <div class="tour-card">
+            <div class="tour-image">
+                <img src="mauritius.jpg" alt="Mauritius Island, Africa">
+            </div>
+            <div class="tour-info">
+                <h3 class="tour-title">Mauritius Island, Africa</h3>
+                <div class="tour-rating">
+                    ★★★★★ 5 customer reviews
+                </div>
+                <div class="clearfix">
+                    <div class="tour-price">$890</div>
+                </div>
+                <p class="tour-description">
+                    The beautiful and inviting island nation of Mauritius is an ideal 'flop and drop' at the conclusion of your safari. Indulge in the delightful scents of the fragrant...
+                </p>
+
+                <a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
+                <a class="button-black-outlines" href="#">Buy This Tour</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+</html>

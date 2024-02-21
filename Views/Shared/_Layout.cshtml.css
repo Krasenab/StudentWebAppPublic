@@ -1,0 +1,147 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+
+.navbar {
+    padding: 0px;
+    border:2px solid pink;
+  
+}
+
+.container-fluid {
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-bottom:0;
+    border:2px solid blue;
+
+}
+
+.navbar-collapse {
+    border:2px solid red;
+    
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+
+}
+
+
+
+a {
+    color: #0077cc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+ 
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+   
+
+}
+
+.nav-item {
+    position: relative; /* Ако вече не е зададено */
+    /** padding: 20px 15px;*/
+    padding: 8px; /*20 15px default*/
+    letter-spacing: .05em;
+    color: #ffffff;
+
+    z-index: 1;
+}
+
+    .nav-item::before {
+        content: '';
+        position: absolute;
+        top: 0; /* Позициониране в горната част на елемента */
+        left: 0; /* Позициониране в левия край на елемента */
+        width: 0; /* Начална ширина е 0 */
+        height: 3px; /* Височината на бордъра */
+        background: #01b3a7; /* Цвета на бордъра */
+        transition: width 0.35s ease; /* Анимация на ширината */
+    }
+
+    .nav-item:hover::before {
+        width: 100%; /* При ховър ширината става 100% */
+    }
+
+
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    /* border-bottom: 1px solid #e5e5e5;*/
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+
+
+.container {
+    border: solid 3px blue;
+    /*only add flex to can use max width to can make 100% width to all element in conteiner but only the firs */
+    display: flex;
+    max-width: 100%;
+    padding: 0;
+    margin-top: 0;
+                     /*  transform: translateY(-0.5%); One of the method to remove gap between navbar and first element   transform:translateY(-0.5%); . Not ChatGPT*/
+    overflow: hidden;
+}
+
+.pb-3 {
+    width: 100%;
+    border: solid 3px red;
+    margin-left: 0;
+    margin-right: 0;
+   /* transform: translateY(-0.5%);*/
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+
+        
+}
+
+
+.containers-footer {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    border:2px solid black;
+    background:#151515;    
+}
+
+
+
+
+
+    .containers-footer ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap:0.5em;
+    }
