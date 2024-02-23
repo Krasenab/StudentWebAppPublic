@@ -455,7 +455,7 @@
             <div class="col-lg-6 text-center ">
 
                 <div class="animate__animated animate__slideInLeft" style=" animation-delay:1.5s">
-                    <img src="~/Image/travel-tourist-people-concept-vector-illustration-adventure-around-world-tourism-vacation-airplane-holiday-journey-family-180948691.webp" alt="" width="750" height="550">
+                    <img src="~/Image/tour-guide-lady-and-group-of-tourists-vector.jpg" alt="" width="750" height="550">
                 </div>
             </div>
 
@@ -489,6 +489,33 @@
             </div>
         </div>
     </div>
+
+
+    <!--Записа по показания начин е класичсеки беисик и правилен но пречи на прилагането на javascript кода
+        <div class="tour-card animate__animated' animate__backInLeft"> и в двата случея се вклучва CDN библотеката. -->
+
+
+    <div class="tour-card">
+        <div class="tour-image">
+            <img src="~/Image/Rent.jpg" alt="Benidorm, Spain">
+        </div>
+        <div class="tour-info">
+            <div class="clearfix">
+                <div class="tour-price">$790</div>
+            </div>
+            <h3 class="tour-title">Benidorm, Spain</h3>
+            <div class="tour-rating">
+                ★★★★☆ 4 customer reviews
+            </div>
+            <p class="tour-description">
+                Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...
+            </p>
+
+            <a href="#" class="tour-button">Buy This Tour</a>
+        </div>
+
+    </div>
+
 
     <!--My Secton for "Our service part"-->
 
@@ -535,7 +562,7 @@
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
 
-                          <i class="fa fa-solid fa-map-location-dot fa-2xl"></i>
+                            <i class="fa fa-solid fa-map-location-dot fa-2xl"></i>
                             <h5>
                                 Exchange of professional experience
                             </h5>
@@ -548,7 +575,7 @@
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
 
-                           <i class="fa fa-solid fa-user-group fa-2xl"></i>
+                            <i class="fa fa-solid fa-user-group fa-2xl"></i>
                             <h5>
                                 Exchange of professional experience
                             </h5>
@@ -564,59 +591,6 @@
         </div>
     </div>
 
-
-
-
-    <!-- Tour Card 1 -->
-    <!--Записа по показания начин е класичсеки беисик и правилен но пречи на прилагането на javascript кода
-        <div class="tour-card animate__animated' animate__backInLeft"> и в двата случея се вклучва CDN библотеката. -->
-
-
-    <div class="tour-card">
-        <div class="tour-image">
-            <img src="~/Image/Rent.jpg" alt="Benidorm, Spain">
-        </div>
-        <div class="tour-info">
-            <div class="clearfix">
-                <div class="tour-price">$790</div>
-            </div>
-            <h3 class="tour-title">Benidorm, Spain</h3>
-            <div class="tour-rating">
-                ★★★★☆ 4 customer reviews
-            </div>
-            <p class="tour-description">
-                Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...
-            </p>
-
-            <a href="#" class="tour-button">Buy This Tour</a>
-        </div>
-
-    </div>
-
-
-    <!-- Tour Card 2 -->
-    <div class="tour-card-right">
-        <div class="tour-image">
-            <img src="~/Image/forest-1024x679.jpg" alt="Mauritius Island, Africa">
-        </div>
-        <div class="tour-info">
-            <div class="clearfix">
-                <div class="tour-price">$890</div>
-
-            </div>
-            <h3 class="tour-title">Mauritius Island, Africa</h3>
-            <div class="tour-rating">
-                ★★★★★ 5 customer reviews
-            </div>
-
-            <p class="tour-description">
-                The beautiful and inviting island nation of Mauritius is an ideal 'flop and drop' at the conclusion of your safari. Indulge in the delightful scents of the fragrant...
-            </p>
-
-            <a href="#" class="tour-button">Buy This Tour</a>
-
-        </div>
-    </div>
 
 
 
@@ -656,33 +630,7 @@
     });
 </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = {
-            root: null, // наблюдава относително към viewport
-            rootMargin: '0px',
-            threshold: 0.1 // 1.0 означава, че анимацията ще стартира, когато 100% от елемента е видим
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Ако елементът влезе във видимата област, добавя анимационни класове
-                    entry.target.classList.add('animate__animated', 'animate__backInRight', 'animation_delay:2s');
-                    // След като елементът е анимиран, спираме наблюдението върху него
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Добавя всички елементи .tour-card, които искаш да наблюдаваш
-        document.querySelectorAll('.tour-card-right').forEach((element) => {
-            observer.observe(element);
-        });
-
-    });
-
-</script>
 
 
 
