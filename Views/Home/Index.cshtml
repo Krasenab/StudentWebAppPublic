@@ -14,14 +14,16 @@
         .carousel-caption {
 
             bottom: 220px;
+            right:220px;
         }
 
             
         .carousel-caption h5 {
+
                 font-size: 64px;
                 text-transform: uppercase;
-                font-family: Montserrat;
                 font-weight: bold;
+                
         
         }
 
@@ -34,15 +36,25 @@
             }
 
             .carousel-caption a {
-
                 text-transform: uppercase;
-                background: #17a2b8;
+                background: rgba(0, 0, 0, 0.2); /* Полупрозрачен черен фон */
+                color: #ffffff; /* Бял текст */
                 padding: 10px 30px;
                 display: inline-block;
-                color: #fff;
                 margin-top: 15px;
+                border: 2px solid #ffffff; /* Тънка бяла рамка */
+                border-radius: 9px; /* Закръглени ръбове */
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Мека външна сянка */
+                transition: background 0.3s ease, transform 0.3s ease;
+                text-decoration: none; /* Премахва подчертаването на връзките */
+                backdrop-filter: blur(5px); /* Замъглен ефект за подобряване на контраста на разнообразен фон */
             }
 
+                .carousel-caption a:hover {
+                    background: rgba(23, 162, 184, 0.4);
+                    /*  background: rgba(0, 0, 0, 0.3);По-тъмен фон при ховър за повече контраст */
+                    transform: scale(1.05); /* Леко увеличение за допълнителен акцент */
+                }
 
         .carousel-inner {
             height: 750px;
@@ -418,7 +430,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="~/Image/forest-1024x679.jpg" class="d-block w-100 " alt="...">
+                <img src="~/Image/60e30b6fa710d.jpg" class="d-block w-100 " alt="...">
 
             </div>
             <div class="carousel-caption d-none d-md-block ">
@@ -535,7 +547,7 @@
                         <div class="p-4">
                             <i class="fa-solid fa-earth-americas fa-2xl"></i>
                             <h5>
-                                Best tour places araound the globe
+                                Difrent trips araound the globe
                             </h5>
                             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                         </div>
